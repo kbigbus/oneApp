@@ -1,5 +1,6 @@
 {
   "pages": [
+      "page/home/index",
       "page/picture/index/index",
       "page/note/index/index",
       "page/movie/index/index"
@@ -16,25 +17,25 @@
     "borderStyle": "black",
     "backgroundColor": "#ffffff",
     "list": [{
-      "pagePath": "page/picture/index/index",
+      "pagePath": "page/home/index",
       "iconPath": "icon/home.png",
-      "selectedIconPath": "icon/home_active.png",
-      "text": ""
+      "selectedIconPath": "icon/home.png",
+      "text": "首页"
     }, {
       "pagePath": "page/picture/index/index",
-      "iconPath": "icon/home.png",
-      "selectedIconPath": "icon/home_active.png",
-      "text": ""
+      "iconPath": "icon/pic.png",
+      "selectedIconPath": "icon/pic.png",
+      "text": "图片"
     }, {
       "pagePath": "page/note/index/index",
       "iconPath": "icon/reading.png",
-      "selectedIconPath": "icon/reading_active.png",
-      "text": ""
+      "selectedIconPath": "icon/reading.png",
+      "text": "阅读"
     },{
       "pagePath": "page/movie/index/index",
       "iconPath": "icon/movie.png",
-      "selectedIconPath": "icon/movie_active.png",
-      "text": ""
+      "selectedIconPath": "icon/movie.png",
+      "text": "电影"
     }]
   },
   "networkTimeout": {

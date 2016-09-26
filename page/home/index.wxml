@@ -1,6 +1,6 @@
 <view class="index">
     <view class="head">
-        <view class="title">图片</view>
+        <view class="title">Home首页</view>
         <view class="desc"></view>
     </view>
 </view>

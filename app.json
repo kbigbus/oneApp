@@ -1,0 +1,47 @@
+{
+  "pages": [
+      "page/picture/index/index",
+      "page/note/index/index",
+      "page/movie/index/index"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "One",
+    "navigationBarBackgroundColor": "#fbf9fe",
+    "backgroundColor": "#fbf9fe"
+  },
+  "tabBar": {
+    "color": "#dddddd",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [{
+      "pagePath": "page/picture/index/index",
+      "iconPath": "icon/home.png",
+      "selectedIconPath": "icon/home_active.png",
+      "text": ""
+    }, {
+      "pagePath": "page/picture/index/index",
+      "iconPath": "icon/home.png",
+      "selectedIconPath": "icon/home_active.png",
+      "text": ""
+    }, {
+      "pagePath": "page/note/index/index",
+      "iconPath": "icon/reading.png",
+      "selectedIconPath": "icon/reading_active.png",
+      "text": ""
+    },{
+      "pagePath": "page/movie/index/index",
+      "iconPath": "icon/movie.png",
+      "selectedIconPath": "icon/movie_active.png",
+      "text": ""
+    }]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

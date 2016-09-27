@@ -1,6 +1,45 @@
+<template name="forTest">
+	<view wx:for="{{list}}">
+    <text> {{index}}: {{item}} </text>
+    </view>
+</template>
+
 <view class="index">
     <view class="head">
         <view class="title">Home首页</view>
         <view class="desc"></view>
     </view>
+    <template is="forTest" data="{{list}}"/>
+    <view wx:for="{{list}}">
+    <text> {{index}}: {{item}} </text>
+    </view>
+
+    
+
+</view>
+
+<swiper indicator-dots="{{indicatorDots}}"
+	  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+	  <block wx:for="{{imgUrls}}">
+	    <swiper-item>
+	      <image src="{{item}}" class="slide-image" width="355" height="150"/>
+	    </swiper-item>
+	  </block>
+	</swiper>
+
+<view class="section">
+  <view class="section__title">flex-direction: row</view>
+  <view class="flex-wrp" style="flex-direction:row;">
+    <view class="flex-item bc_green">1</view>
+    <view class="flex-item bc_red">2</view>
+    <view class="flex-item bc_blue">3</view>
+  </view>
+</view>
+<view class="section">
+  <view class="section__title">flex-direction: column</view>
+  <view class="flex-wrp" style="height: 300px;flex-direction:column;">
+    <view class="flex-item bc_green">1</view>
+    <view class="flex-item bc_red">2</view>
+    <view class="flex-item bc_blue">3</view>
+  </view>
 </view>

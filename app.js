@@ -1,6 +1,6 @@
 App({
   onLaunch: function () {
-    console.log('App Launch')
+    console.log('App Launch2')
   },
   onShow: function () {
     console.log('App Show')

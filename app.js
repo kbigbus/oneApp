@@ -10,5 +10,8 @@ App({
   },
   globalData: {
     hasLogin: false
+  },
+  globalConfig: {
+    apiDomain: "http://www.local.com/",
   }
 })

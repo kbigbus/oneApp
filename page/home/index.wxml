@@ -6,14 +6,17 @@
       <image src="{{item.imgUrl}}" class="slide-image" width="355" height="150"/>
       <view class="body view">
         <view class="lineone">
-          <text class="volname">{{item.volname}}</text>
-          <text class="author">{{item.author}} 作品</text>
+          <text class="floatleft">{{item.volname}}</text>
+          <text class="floatright">{{item.author}} 作品</text>
         </view>
         <view class="linetwo">{{item.content}}</view>
         <view class="linethree">
-          <text>广州</text>
-          <text>{{item.date}}</text>
-          <text>{{item.like}}</text>
+          <view class="floatright">
+              <text wx:if="{{index==0}}" class="marginright20px">天气数据</text>
+              <text class="marginright20px">{{item.date}}</text>
+              <image style="width: 12px; height: 12px;" id="img_{{item.id}}" mode="aspectFit" bindtap="heartFill" src="{{item.heartPicUrl}}"></image>
+              <text> {{item.like}}</text>
+          </view>
         </view>
       </view>
     </swiper-item>

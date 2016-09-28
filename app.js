@@ -9,9 +9,16 @@ App({
     console.log('App Hide')
   },
   globalData: {
-    hasLogin: false
+    hasLogin: false,
+    loginData: {
+      userId : 14556,
+    },
+
   },
   globalConfig: {
     apiDomain: "http://www.local.com/",
+    apiHeader: {
+          'Content-Type': 'application/json'
+        },
   }
 })

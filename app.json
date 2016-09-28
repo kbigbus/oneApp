@@ -22,15 +22,15 @@
       "selectedIconPath": "icon/home.png",
       "text": "首页"
     }, {
-      "pagePath": "page/picture/index/index",
-      "iconPath": "icon/pic.png",
-      "selectedIconPath": "icon/pic.png",
-      "text": "图片"
-    }, {
       "pagePath": "page/note/index/index",
       "iconPath": "icon/reading.png",
       "selectedIconPath": "icon/reading.png",
       "text": "阅读"
+    }, {
+      "pagePath": "page/music/index/index",
+      "iconPath": "icon/music.png",
+      "selectedIconPath": "icon/music.png",
+      "text": "音乐"
     },{
       "pagePath": "page/movie/index/index",
       "iconPath": "icon/movie.png",

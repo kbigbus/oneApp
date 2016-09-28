@@ -14,11 +14,14 @@
 image.slide-image{width:320px; height:180px;}
 
 .body {margin-top: 10rpx;color: #888888;font-size: 28rpx;}
+.floatleft{float:left;}
+.floatright{float:right;}
+.marginright20px{ margin-right:20px;}
+
 .view {padding-right:55rpx;}
 .view .lineone{font-size: 15rpx; color:#cccccc; clear:both;}
-.view .volname{float:left;}
-.view .author{float:right;}
+
 .view .linetwo{display:block; clear:both; padding-top:10px; color:#666666; font-size:25rpx; text-indent:50rpx;}
-.view .linethree{font-size: 15rpx; color:#cccccc; clear:both;}
+.view .linethree{font-size: 15rpx; color:#cccccc; clear:both; padding-top:5px;}
 
 

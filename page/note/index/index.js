@@ -65,7 +65,7 @@ Page({
 			}
 		});
 	},
-	redirectUrl: function(e) {
+	navigateUrl: function(e) {
 		var ids = e.currentTarget.id.split('_');
 		wx.navigateTo({
 		  url: 'detail?id='+ids[1]

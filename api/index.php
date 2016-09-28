@@ -36,6 +36,21 @@ switch(strtolower($act)) {
 				),
 			);
 		break;
+	case 'notedetail':
+		$id = $_GET['id'];
+		$arr = array('id'=>$id, 'title'=> '小说标题'.$id, 'content'=> '小说内容'.$id, 'author'=>'作者', 'date'=>'2016-07-12', 'tag'=>'标签'.$id);
+		break;
+	case 'notecomment' :
+		$id = $_GET['id'];
+		$arr = array(
+				array('name'=> '用户1', 'pic'=> '', 'comment'=>'评论内容1+评论内容'.$id, 'date'=> '2016.02.13', 'like'=>1111),
+				array('name'=> '用户2', 'pic'=> '', 'comment'=>'评论内容2+评论内容'.$id, 'date'=> '2016.02.14', 'like'=>2222),
+				array('name'=> '用户3', 'pic'=> '', 'comment'=>'评论内容3+评论内容'.$id, 'date'=> '2016.02.15', 'like'=>3333),
+				array('name'=> '用户4', 'pic'=> '', 'comment'=>'评论内容4+评论内容'.$id, 'date'=> '2016.02.16', 'like'=>433),
+				array('name'=> '用户5', 'pic'=> '', 'comment'=>'评论内容5+评论内容'.$id, 'date'=> '2016.02.17', 'like'=>114411),
+				array('name'=> '用户6', 'pic'=> '', 'comment'=>'评论内容6+评论内容'.$id, 'date'=> '2016.02.18', 'like'=>44),
+			);
+		break;
 	default:
 		$arr = array(
 			array('id'=>1,'imgUrl'=>'http://cdn.jinxidao.com/group1/M00/03/B4/ooYBAFe0OaqANuheAAGHCGYpjyA723.jpg?imageView2/5/w/480/h/240/interlace/1/q/80', 'author'=> '难念的风', 'volname'=> 'VOL.1451', 'content'=> '写出你一生要做的事情，把单子放在皮夹里，经常拿出来看。人生要有目标，要有计划，要有提醒，要有紧迫感。一个又一个小目标串起来，就成了你一生的大目标。生活富足了，环境改善了，不要忘了皮夹里那张看似薄薄的单子。', 'date'=> '2016-09-27', 'like'=> '11111', 'heartFill'=>false),

@@ -1,0 +1,16 @@
+<view class="index body" >
+<view>{{recordInfo.title}}</view>
+{{recordInfo.author}}
+{{recordInfo.content}}
+{{recordInfo.tag}}
+{{recordInfo.date}}
+
+<view wx:for="{{commentList}}">
+ {{item.name}} {{item.pic}} {{item.comment}} {{item.like}} {{item.date}}
+</view>
+
+
+<modal class="modal" hidden="{{modalHidden}}" no-cancel bindconfirm="backNav">
+  <view> 参数有误 </view>
+</modal>
+</view>

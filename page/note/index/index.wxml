@@ -3,7 +3,7 @@
   autoplay="{{autoplayImg}}" interval="{{intervalImg}}" duration="{{durationImg}}" class="swiper1">
   <block wx:for="{{imgList}}">
     <swiper-item>
-      <image src="{{item.imgUrl}}" class="slide-image" bindtap="redirectUrl" id="img_{{item.noteId}}"/>
+      <image src="{{item.imgUrl}}" class="slide-image" bindtap="navigateUrl" id="img_{{item.noteId}}"/>
     </swiper-item>
   </block>
 </swiper>
@@ -13,7 +13,7 @@
   <block wx:for="{{noteList}}" wx:for-item="swiperList">
     <swiper-item>
     	<view wx:for="{{swiperList}}" wx:for-item="item">
-    	<view class="notebox" bindtap="redirectUrl" id="note_{{item.noteId}}">
+    	<view class="notebox" bindtap="navigateUrl" id="note_{{item.noteId}}">
       		<view>
       			<text class="title floatleft">{{item.title}}</text>
       			<text class="tag floatright">{{item.tag}}</text>

@@ -3,6 +3,7 @@
       "page/home/index",
       "page/music/index/index",
       "page/note/index/index",
+      "page/note/index/detail",
       "page/movie/index/index"
   ],
   "window": {

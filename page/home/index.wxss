@@ -1,6 +1,5 @@
 .index{
     background-color: #FBF9FE;
-    font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
     flex: 1;
     min-height: 100%;
     font-size: 32rpx;
@@ -9,16 +8,15 @@
 .swiper{
     display: block;
     padding:55rpx 0 0 55rpx;
-    height: 400px;
+    height: 500px;
 }
 image.slide-image{width:320px; height:180px;}
 
-.body {margin-top: 10rpx;color: #888888;font-size: 28rpx;}
 .floatleft{float:left;}
 .floatright{float:right;}
 .marginright20px{ margin-right:20px;}
 
-.view {padding-right:55rpx;}
+.view {padding-right:55rpx; margin-top: 10rpx;color: #888888;font-size: 28rpx;}
 .view .lineone{font-size: 15rpx; color:#cccccc; clear:both;}
 
 .view .linetwo{display:block; clear:both; padding-top:10px; color:#666666; font-size:25rpx; text-indent:50rpx;}

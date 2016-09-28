@@ -1,6 +1,33 @@
-<view class="index">
-    <view class="head">
-        <view class="title">阅读</view>
-        <view class="desc"></view>
-    </view>
+<view class="index body" >
+<swiper indicator-dots="{{indicatorDotsImg}}"
+  autoplay="{{autoplayImg}}" interval="{{intervalImg}}" duration="{{durationImg}}" class="swiper1">
+  <block wx:for="{{imgList}}">
+    <swiper-item>
+      <image src="{{item.imgUrl}}" class="slide-image" bindtap="redirectUrl" id="img_{{item.noteId}}"/>
+    </swiper-item>
+  </block>
+</swiper>
+
+<swiper indicator-dots="{{indicatorDotsList}}"
+  autoplay="{{autoplayList}}" interval="{{intervalList}}" duration="{{durationList}}" class="swiper2">
+  <block wx:for="{{noteList}}" wx:for-item="swiperList">
+    <swiper-item>
+    	<view wx:for="{{swiperList}}" wx:for-item="item">
+    	<view class="notebox" bindtap="redirectUrl" id="note_{{item.noteId}}">
+      		<view>
+      			<text class="title floatleft">{{item.title}}</text>
+      			<text class="tag floatright">{{item.tag}}</text>
+  			</view>
+      		<view>
+      			<text class="author floatleft">{{item.author}}</text>
+  			</view>
+      		<view>
+      			<text class="desc">{{item.desc}}</text>
+      		</view>
+      	</view>
+      	</view>
+    </swiper-item>
+  </block>
+</swiper>
+
 </view>

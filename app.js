@@ -18,7 +18,7 @@ App({
   globalConfig: {
     apiDomain: "http://www.local.com/",
     apiHeader: {
-          'Content-Type': 'application/json'
-        },
+      'Content-Type': 'application/json'
+    },
   }
 })

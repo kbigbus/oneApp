@@ -1,7 +1,7 @@
 {
   "pages": [
       "page/home/index",
-      "page/picture/index/index",
+      "page/music/index/index",
       "page/note/index/index",
       "page/movie/index/index"
   ],

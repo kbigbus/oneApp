@@ -1,14 +1,19 @@
 Page({
 	data: {
-		list :[1,2],
+		list :[],
 		indicatorDots: false,
 	    autoplay: false,
-	    interval: 0,
+	    interval: 5000,
 	    duration: 1000,
 		modalHidden:false,//默认不隐藏弹窗
 	},
 	onLoad:function(options){
 		this.getIndexData();
+	},
+	changeNav:function (navTitle){
+		wx.setNavigationBarTitle({
+		  title: navTitle,
+		});
 	},
 	getIndexData:function () {//加载初始化数据
 		var that = this;
@@ -63,7 +68,7 @@ Page({
 				})
 			}
 		}
-		
+
 		this.setData({
 			list : listData
 		});

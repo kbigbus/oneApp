@@ -6,6 +6,36 @@ switch(strtolower($act)) {
 	case 'hearthandle':
 		$arr = '处理爱心操作成功';
 		break;
+	case 'noteimg' :
+		$arr = array(
+				array('imgUrl'=> 'http://cdn.jinxidao.com/group1/M00/03/B4/ooYBAFe0OaqANuheAAGHCGYpjyA723.jpg?imageView2/5/w/480/h/240/interlace/1/q/80', 'noteId'=>1),
+				array('imgUrl'=> 'http://cdn.jinxidao.com/group1/M00/03/B4/ooYBAFe0OaqANuheAAGHCGYpjyA723.jpg?imageView2/5/w/480/h/240/interlace/1/q/80', 'noteId'=>2),
+				array('imgUrl'=> 'http://cdn.jinxidao.com/group1/M00/03/B4/ooYBAFe0OaqANuheAAGHCGYpjyA723.jpg?imageView2/5/w/480/h/240/interlace/1/q/80', 'noteId'=>3),
+				array('imgUrl'=> 'http://cdn.jinxidao.com/group1/M00/03/B4/ooYBAFe0OaqANuheAAGHCGYpjyA723.jpg?imageView2/5/w/480/h/240/interlace/1/q/80', 'noteId'=>4),
+				array('imgUrl'=> 'http://cdn.jinxidao.com/group1/M00/03/B4/ooYBAFe0OaqANuheAAGHCGYpjyA723.jpg?imageView2/5/w/480/h/240/interlace/1/q/80', 'noteId'=>5),
+				array('imgUrl'=> 'http://cdn.jinxidao.com/group1/M00/03/B4/ooYBAFe0OaqANuheAAGHCGYpjyA723.jpg?imageView2/5/w/480/h/240/interlace/1/q/80', 'noteId'=>6),
+				array('imgUrl'=> 'http://cdn.jinxidao.com/group1/M00/03/B4/ooYBAFe0OaqANuheAAGHCGYpjyA723.jpg?imageView2/5/w/480/h/240/interlace/1/q/80', 'noteId'=>7),
+			);
+		break;
+	case 'notelist' :
+		$arr = array(
+				array(
+					array('title'=> '火车穿山过1', 'desc'=> '火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1', 'noteId'=>1, 'linkUrl'=>'', 'tag'=>'短篇', 'author'=>'张翰是'),
+					array('title'=> '火车穿山过2', 'desc'=> '火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1','noteId'=>2, 'linkUrl'=>'', 'tag'=>'连载', 'author'=>'张翰'),
+					array('title'=> '火车穿山过3', 'desc'=> '火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1','noteId'=>3, 'linkUrl'=>'', 'tag'=>'长篇', 'author'=>'张是'),
+				),
+				array(
+					array('title'=> '火车穿山过4', 'desc'=> '火车穿山过1火车穿山过1火车穿山过1火车穿山过1','noteId'=>4, 'linkUrl'=>'', 'tag'=>'中篇', 'author'=>'张翰是'),
+					array('title'=> '火车穿山过5', 'desc'=> '火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1','noteId'=>5, 'linkUrl'=>'', 'tag'=>'短篇', 'author'=>'翰张是'),
+					array('title'=> '火车穿山过6', 'desc'=> '火车穿山过1火车穿山过1火车穿山过1火车穿山过1','noteId'=>6, 'linkUrl'=>'', 'tag'=>'连篇', 'author'=>'翰是张'),
+				),
+				array(
+					array('title'=> '火车穿山过7', 'desc'=> '火车穿山过1火车穿山过1火车穿山过1火车穿山过1','noteId'=>7, 'linkUrl'=>'', 'tag'=>'鬼篇', 'author'=>'是翰张'),
+					array('title'=> '火车穿山过8', 'desc'=> '火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1火车穿山过1s','noteId'=>8, 'linkUrl'=>'', 'tag'=>'短篇', 'author'=>'翰张是'),
+					array('title'=> '火车穿山过9', 'desc'=> '火车穿山过1火车穿山过1火车穿山过1火车穿山过1','noteId'=>9, 'linkUrl'=>'', 'tag'=>'连篇', 'author'=>'翰是张'),
+				),
+			);
+		break;
 	default:
 		$arr = array(
 			array('id'=>1,'imgUrl'=>'http://cdn.jinxidao.com/group1/M00/03/B4/ooYBAFe0OaqANuheAAGHCGYpjyA723.jpg?imageView2/5/w/480/h/240/interlace/1/q/80', 'author'=> '难念的风', 'volname'=> 'VOL.1451', 'content'=> '写出你一生要做的事情，把单子放在皮夹里，经常拿出来看。人生要有目标，要有计划，要有提醒，要有紧迫感。一个又一个小目标串起来，就成了你一生的大目标。生活富足了，环境改善了，不要忘了皮夹里那张看似薄薄的单子。', 'date'=> '2016-09-27', 'like'=> '11111', 'heartFill'=>false),

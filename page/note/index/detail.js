@@ -35,7 +35,7 @@ Page({
 					that.setData({
 						recordInfo : ret.data.content,
 					});
-					
+					that.changeNav(ret.data.content.tag)
 				}
 			}
 		});
@@ -61,5 +61,11 @@ Page({
 	},
 	backNav :function(){//回退至上一页
 		wx.navigateBack()
+	},
+	navigateAuthor: function (e) {
+		var ids = e.currentTarget.id.split('_');
+		wx.navigateTo({
+		  url: 'author?id='+ids[1]
+		})
 	}
 })

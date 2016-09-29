@@ -1,14 +1,23 @@
-<view class="index body" >
-<view>{{recordInfo.title}}</view>
-{{recordInfo.author}}
-{{recordInfo.content}}
-{{recordInfo.tag}}
-{{recordInfo.date}}
-
-<view wx:for="{{commentList}}">
- {{item.name}} {{item.pic}} {{item.comment}} {{item.like}} {{item.date}}
+<view class="index">
+<view class="view">
+	<view class="lineone">
+		<view class="floatleft">
+			<image src="{{recordInfo.pic}}" class="headpic floatleft" bindtap="navigateAuthor" id="img_{{recordInfo.authorId}}" />
+			<text bindtap="navigateAuthor" id="author_{{recordInfo.authorId}}">{{recordInfo.author}}</text>
+			<text >{{recordInfo.date}}</text>
+		</view>
+		<view class="floatright">点击放语言</view>
+	</view>
+	<view class="linetwo">
+		<view class="title">{{recordInfo.title}}</view>
+		<view class="content">{{recordInfo.content}}</view>
+	</view>
+	<view class="linethree">
+		<view wx:for="{{commentList}}">
+		{{item.name}} {{item.pic}} {{item.comment}} {{item.like}} {{item.date}}
+		</view>
+	</view>
 </view>
-
 
 <modal class="modal" hidden="{{modalHidden}}" no-cancel bindconfirm="backNav">
   <view> 参数有误 </view>

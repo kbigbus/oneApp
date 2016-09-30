@@ -3,7 +3,7 @@
   autoplay="{{autoplayImg}}" interval="{{intervalImg}}" duration="{{durationImg}}" class="swiper1">
   <block wx:for="{{imgList}}">
     <swiper-item>
-      <image src="{{item.imgUrl}}" class="slide-image" bindtap="navigateUrl" id="img_{{item.noteId}}"/>
+      <image src="{{item.imgUrl}}" class="slide-image" bindtap="showSheet" id="img_{{item.noteId}}"/>
     </swiper-item>
   </block>
 </swiper>
@@ -13,21 +13,40 @@
   <block wx:for="{{noteList}}" wx:for-item="swiperList">
     <swiper-item>
     	<view wx:for="{{swiperList}}" wx:for-item="item">
-    	<view class="notebox" bindtap="navigateUrl" id="note_{{item.noteId}}">
+    	  <view class="notebox" bindtap="navigateUrl" id="note_{{item.noteId}}">
       		<view>
       			<text class="title floatleft">{{item.title}}</text>
       			<text class="tag floatright">{{item.tag}}</text>
-  			</view>
+  			  </view>
       		<view>
       			<text class="author floatleft">{{item.author}}</text>
-  			</view>
+  			  </view>
       		<view>
       			<text class="desc">{{item.desc}}</text>
       		</view>
       	</view>
-      	</view>
+    	</view>
     </swiper-item>
   </block>
 </swiper>
 
+<action-sheet hidden="{{sheetHidden}}">
+    <view wx:for="{{sheetList[0]}}" wx:for-item="item">
+      <view class="notebox" bindtap="navigateUrl" id="note_{{item.noteId}}">
+          <view>
+            <text class="title floatleft">{{item.title}}</text>
+            <text class="tag floatright">{{item.tag}}</text>
+          </view>
+          <view>
+            <text class="author floatleft">{{item.author}}</text>
+          </view>
+          <view>
+            <text class="desc">{{item.desc}}</text>
+          </view>
+      </view>
+    </view>
+    <action-sheet-cancel>
+      <image bindtap="cancelSheet" style="width: 20px; height: 20px; background-color: #ffffff;"  src="../../../icon/delete.png"></image>
+    </action-sheet-cancel>
+</action-sheet>
 </view>

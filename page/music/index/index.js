@@ -1,5 +1,7 @@
 Page({
-	data: {},
+	data: {
+		sheetHidden : false
+	},
 	onLoad:function(options){
 		this.changeNav('音乐');
 	},

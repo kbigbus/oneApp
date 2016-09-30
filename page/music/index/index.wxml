@@ -3,4 +3,9 @@
         <view class="title">音乐</view>
         <view class="desc"></view>
     </view>
+    <action-sheet hidden="{{sheetHidden}}">
+	    <view style="height:100%">ewrweewr</view>
+	  <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+	</action-sheet>
 </view>
+

@@ -11,6 +11,9 @@ Page({
 	    autoplayList: false,
 	    intervalList: 5000,
 	    durationList: 1000,
+
+	    sheetHidden:true,
+	    sheetList : [],
 		
 	},
 	onLoad:function(options){
@@ -70,5 +73,33 @@ Page({
 		wx.navigateTo({
 		  url: 'detail?id='+ids[1]
 		})
+	},
+	showSheet: function(e) {
+		var ids = e.currentTarget.id.split('_');
+		//ajax获取列表
+		var that = this;
+		var appInstance = getApp();
+		wx.request({
+			url: appInstance.globalConfig.apiDomain + 'oneApp/index.php',
+			data: {
+				act : 'notelist'
+			},
+			header: appInstance.globalConfig.apiHeader,
+			success:function(ret) {
+				if(ret.data.code==1000) {
+					that.setData({
+						sheetList : ret.data.content,
+					});
+				}
+			}
+		});
+		this.setData({
+			sheetHidden : false
+		});
+	},
+	cancelSheet:function(e) {
+		this.setData({
+			sheetHidden : true,
+		});
 	}
 })

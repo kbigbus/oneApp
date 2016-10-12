@@ -1,7 +1,13 @@
-var BasePage = require('../../BasePage.js')
-BasePage({
+var common = require('../../../util/common.js')
+Page({
+	data: {
+	    navTitle: '电影'
+	},
 	onLoad:function(options) {
-		this.setNavTitle('电影');
-	}
+		common.setNavTitle(this.data.navTitle);
+	},
+	onShow:function(options) {
+		common.setNavTitle(this.data.navTitle);
+	},
 })
 

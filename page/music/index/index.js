@@ -1,3 +1,5 @@
+var common = require('../../../util/common.js');
+
 Page({
 	data: {
 		list : [],
@@ -5,18 +7,14 @@ Page({
 	    autoplay: false,
 	    interval: 5000,
 	    duration: 1000,
+	    navTitle: '音乐'
 	},
 	onLoad:function(options){
-		this.changeNav('音乐');
+		common.setNavTitle(this.data.navTitle);
 		this.getList();
 	},
 	onShow:function(options) {
-		this.changeNav('音乐');
-	},
-	changeNav:function (navTitle){
-		wx.setNavigationBarTitle({
-		  title: navTitle,
-		});
+		common.setNavTitle(this.data.navTitle);
 	},
 	getList : function () {//加载音频与文字消息
 		var that = this;

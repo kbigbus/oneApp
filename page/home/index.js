@@ -1,3 +1,5 @@
+var common = require('../../util/common.js');
+
 Page({
 	data: {
 		list :[],
@@ -6,14 +8,14 @@ Page({
 	    interval: 5000,
 	    duration: 1000,
 		modalHidden:false,//默认不隐藏弹窗
+		navTitle: '首页'
 	},
 	onLoad:function(options){
 		this.getIndexData();
+		common.setNavTitle(this.data.navTitle);
 	},
-	changeNav:function (navTitle){
-		wx.setNavigationBarTitle({
-		  title: navTitle,
-		});
+	onShow:function(options) {
+		common.setNavTitle(this.data.navTitle);
 	},
 	getIndexData:function () {//加载初始化数据
 		var that = this;

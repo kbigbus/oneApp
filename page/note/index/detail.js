@@ -1,3 +1,5 @@
+var common = require('../../../util/common.js');
+
 Page({
 	data:{
 		recordInfo : {},
@@ -15,11 +17,6 @@ Page({
 			this.getRecordDetail(id);
 		}
 	},
-	changeNav:function (navTitle){
-		wx.setNavigationBarTitle({
-		  title: navTitle,
-		});
-	},
 	getRecordDetail:function (id) {//加载文章详情
 		var that = this;
 		var appInstance = getApp();
@@ -35,7 +32,7 @@ Page({
 					that.setData({
 						recordInfo : ret.data.content,
 					});
-					that.changeNav(ret.data.content.tag)
+					common.setNavTitle(ret.data.content.tag)
 				}
 			}
 		});

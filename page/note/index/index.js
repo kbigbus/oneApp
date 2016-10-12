@@ -1,3 +1,5 @@
+var common = require('../../../util/common.js');
+
 Page({
 	data:{
 		imgList : [],
@@ -14,20 +16,16 @@ Page({
 
 	    sheetHidden:true,
 	    sheetList : [],
-		
+
+	    navTitle: '阅读',
 	},
 	onLoad:function(options){
 		this.getImgData();
 		this.getNoteData();
-		this.changeNav('阅读');
+		common.setNavTitle(this.data.navTitle);
 	},
 	onShow:function(options) {
-		this.changeNav('阅读');
-	},
-	changeNav:function (navTitle){
-		wx.setNavigationBarTitle({
-		  title: navTitle,
-		});
+		common.setNavTitle(this.data.navTitle);
 	},
 	getImgData:function () {//加载图片数据
 		var that = this;

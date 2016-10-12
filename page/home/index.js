@@ -28,6 +28,7 @@ Page({
 						list : ret.data.content,
 						modalHidden : true
 					});
+					var i;
 					for(i in that.data.list) {
 						that.data.list[i].heartPicUrl = '../../icon/heart_' +(that.data.list[i].heartFill ? 'fill' :'empty')+'.png';
 					}
@@ -45,6 +46,7 @@ Page({
 		var appInstance = getApp();
 		var imgId = e.currentTarget.id.split('_');
 		var listData = this.data.list;
+		var i;
 		for(i in listData) {
 			var data = listData[i];//原数据
 			if(imgId[1]==data.id) {
@@ -52,7 +54,7 @@ Page({
 				listData[i].like = data.heartFill ? (parseInt(data.like) - 1) : (parseInt(data.like) + 1);
 				listData[i].heartFill = data.heartFill ? false : true;
 
-				//TODO 异步请求
+				//异步请求
 				wx.request({
 					url: appInstance.globalConfig.apiDomain + 'oneApp/index.php',
 					data: {

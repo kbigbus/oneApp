@@ -1,11 +1,13 @@
-<view class="index">
-    <view class="head">
-        <view class="title">音乐</view>
-        <view class="desc"></view>
-    </view>
-    <action-sheet hidden="{{sheetHidden}}">
-	    <view style="height:100%">ewrweewr</view>
-	  <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
-	</action-sheet>
-</view>
+<view class="index body" >
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="swiper1">
+  <block wx:for="{{list}}">
+    <swiper-item>
+      <image src="{{item.cover}}" class="slide-image" bindtap="showSheet" id="img_{{item.id}}"/>
+      <audio class="audio" src="{{item.web_url}}" poster="{{item.author.web_url}}" name="{{item.title}}" author="{{item.author.user_name}}" action="{{item.audioAction}}" bindplay="audioPlayed" bindtimeupdate="audioTimeUpdated" controls></audio>
+      <view class="textbox">
+      </view>
+    </swiper-item>
+  </block>
+</swiper>
 

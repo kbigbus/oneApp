@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ALL);
 require_once('XUtils.php');
 $act = $_GET['act'];
 
@@ -50,6 +51,22 @@ switch(strtolower($act)) {
 				array('name'=> '用户5', 'pic'=> '', 'comment'=>'评论内容5+评论内容'.$id, 'date'=> '2016.02.17', 'like'=>114411),
 				array('name'=> '用户6', 'pic'=> '', 'comment'=>'评论内容6+评论内容'.$id, 'date'=> '2016.02.18', 'like'=>44),
 			);
+		break;
+	case 'music':
+		//直接获取oneApp的数据
+		$urls = array(
+				'http://v3.wufazhuce.com:8000/api/music/update/1065/2016-10-11%2015:17:01?version=3.5.0&platform=android',
+				'http://v3.wufazhuce.com:8000/api/music/update/1073/2016-10-11%2015:17:01?version=3.5.0&platform=android',
+				'http://v3.wufazhuce.com:8000/api/music/update/1071/2016-10-11%2015:17:01?version=3.5.0&platform=android',
+			);
+		$arr = [];
+		foreach($urls as $url) {
+			$tmpContent = file_get_contents($url);
+			$tmpArr = json_decode($tmpContent,true);
+			if(isset($tmpArr['data']) && $tmpArr['data']) {
+				$arr[] = $tmpArr['data'];
+			}
+		}
 		break;
 	default:
 		$arr = array(

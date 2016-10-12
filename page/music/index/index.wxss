@@ -13,7 +13,7 @@ swiper-item{overflow:scroll !important}
     text-align:center;
 }
 image.slide-image{width:100%; height:400px;}
-.swiper1 .audio{ margin-top:-20px; }
+.swiper1 .audio{ margin-top:-20px; text-align:left;}
 .swiper1 .textbox { height:400px;}
 
 

@@ -6,6 +6,7 @@
       <image src="{{item.cover}}" class="slide-image" bindtap="showSheet" id="img_{{item.id}}"/>
       <audio class="audio" src="{{item.web_url}}" poster="{{item.author.web_url}}" name="{{item.title}}" author="{{item.author.user_name}}" action="{{item.audioAction}}" bindplay="audioPlayed" bindtimeupdate="audioTimeUpdated" controls></audio>
       <view class="textbox">
+      		<text>音乐故事</text>
       </view>
     </swiper-item>
   </block>

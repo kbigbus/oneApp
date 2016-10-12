@@ -46,7 +46,7 @@
       </view>
     </view>
     <action-sheet-cancel>
-      <image bindtap="cancelSheet" style="width: 20px; height: 20px; background-color: #ffffff;"  src="../../../icon/delete.png"></image>
+      <icon style="margin-top:-15px" type="clear" bindtap="cancelSheet"></icon>
     </action-sheet-cancel>
 </action-sheet>
 </view>

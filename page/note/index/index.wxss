@@ -32,4 +32,4 @@ swiper-item{overflow:scroll !important}
 .marginright20px{ margin-right:20px;}
 
 
-action-sheet-cancel{ width:20px; height:20px; padding-top:-50px; background:none; font-size:0px; border:1px solid #f00; float:left; position:absolute; left:0px; top:0px; }
+action-sheet-cancel{ width:20px; height:20px; padding-top:-50px; background:none !important; font-size:0px !important; float:left; position:absolute; left:0px; top:0px; }

@@ -59,11 +59,16 @@ switch(strtolower($act)) {
 				'http://v3.wufazhuce.com:8000/api/music/update/1073/2016-10-11%2015:17:01?version=3.5.0&platform=android',
 				'http://v3.wufazhuce.com:8000/api/music/update/1071/2016-10-11%2015:17:01?version=3.5.0&platform=android',
 			);
+		$mp3List = array(
+			'http://mr1.doubanio.com/e1806a6962e1c1f1617798d36d22ccc6/0/fm/song/p1390493_128k.mp3',
+			'http://mr3.doubanio.com/6ba9d99ac640008a90957f916da9d6bf/0/fm/song/p1646245_128k.mp3',
+			'http://mr1.doubanio.com/588576d5504e796951ffe4065b689399/0/fm/song/p1440601_128k.mp3');
 		$arr = [];
-		foreach($urls as $url) {
+		foreach($urls as $key=>$url) {
 			$tmpContent = file_get_contents($url);
 			$tmpArr = json_decode($tmpContent,true);
 			if(isset($tmpArr['data']) && $tmpArr['data']) {
+				$tmpArr['data']['mp3Url'] = $mp3List[$key];
 				$arr[] = $tmpArr['data'];
 			}
 		}
